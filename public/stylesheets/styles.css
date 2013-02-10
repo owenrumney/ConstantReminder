@@ -1,0 +1,51 @@
+ body {
+      margin-top: 90px;
+ }
+
+ #instructions {
+      display: none;
+ }
+
+ .cell {
+      width: 40px; 
+      height: 40px; 
+      background-color: black; 
+      border-left: 2px white solid;
+      border-right: 2px white solid;
+      border-top: 2px white solid;
+      border-top: 2px white solid;
+      display: inline-block;
+      *display: inline;
+      zoom: 1;
+}
+
+.isLit {
+      background-color: red;
+}
+
+#playArea {
+      margin: 0;
+      padding:0;
+      text-align: center;
+}
+
+.messages {
+      border: darkgreen 2px solid;
+      background-color: palegreen;
+      color: darkgreen;
+      margin: 1px;
+      padding: 3px;
+}
+
+.paddedTop {
+      margin-top: 90px;
+}
+
+p {
+      font-size: 18px !important;
+}
+
+label, input[type="radio"] {
+  font-size: 10px;
+  vertical-align: middle;
+}

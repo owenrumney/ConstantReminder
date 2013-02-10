@@ -1,0 +1,55 @@
+extend layout
+block content
+	div#instructions
+		h2 Instructions
+		p Enter something you need to be reminded about and how often you want to be reminded then click start reminding me.
+		p Don't forget to Enable Notifications at the top of the screen
+		br
+		br
+		input.btn.btn-large.btn-info.btn-block(type='button', value='Got it, Lets go!', id='letsGo')
+	div#prompter
+		h3 Examples
+		br
+		a(href='/?r=Drink+some+water&w=e&e=45&i=mins', class='suggestionLink') Drink some water every 45 minutes
+		<br/>
+		<br/>
+		a(href='/?r=Ring+dentist&w=a&h=10&m=30', class='suggestionLink') Ring dentist at 10:30
+		<br/>
+		<br/>
+		a(href='/?r=Call+John&w=a&h=14&m=00', class='suggestionLink') Call John at 14:00
+		<br/>
+		<br/>
+		h3 Create your own
+		textarea.input-block-level(type='text', placeholder='Remind me to', id='reminderText')
+		label.radio.inline Every 
+			input(type='radio', name='remindWhen', id='optionsEvery', checked) 
+			input.input-mini(type='text', id='period')
+			select.input-small(id='interval')
+				option secs
+				option mins
+				option hours
+		label.radio.inline At 
+			input(type='radio', name='remindWhen', id='optionsAt') 
+			select.input-mini(id='hours')
+				i = 0
+				while (i < 24)
+					if (i < 10)
+						option= '0' + i++
+					else if (i === 12)
+						option(selected)= i++
+					else
+						option= i++
+			select.input-mini(id='minutes')
+				i = 0
+				while (i < 60)
+					if (i < 10)
+						option= '0' + i++
+					else
+						option= i++
+		br
+		hr
+		input.btn.btn-info(type='button', value='Instructions', id='showInstructions')
+		input.btn.btn-disabled.pull-right(type='button', value='Start reminding', id='start', disabled)
+		script(type='text/javascript', src='js/constantreminder.min.js')
+block sidebar-left
+block sidebar-right
