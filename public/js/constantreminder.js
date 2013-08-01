@@ -6,8 +6,7 @@ $(function() {
 
 $(function() {
     var qs = $.deparam.querystring();
-    if (qs)
-    {
+    if (qs) {
         if (qs['r'])
         {
             showPrompter();
@@ -130,7 +129,7 @@ function showPrompter() {
 
 function showInstructions() {
     $('#prompter').hide();
-    $('#instructions').show(300);
+    $('#instructions').show(300)
 }
 
 function setReminder(item) {
@@ -186,3 +185,4 @@ function changeToEnabled() {
     $('#start').addClass('btn-info');
     $('#start').removeClass('btn-disabled');  
 }
+
